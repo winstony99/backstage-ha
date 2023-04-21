@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejswww
+  namespace: default
+  labels:
+    backstage.io/kubernetes-id: nodejswww
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nodejswww
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: nodejswww
+        version: v1
+        backstage.io/kubernetes-id: nodejswww
+    spec:
+      containers:
+        - image: wmy9/nodejswww:harness
+          imagePullPolicy: Always
+          name: nodejswww
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejswww
+  labels:
+    backstage.io/kubernetes-id: nodejswww  
+spec:
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    app: nodejswww
+  type: NodePort
+    
