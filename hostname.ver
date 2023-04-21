@@ -1,0 +1,5 @@
+HAR_APP_NAME="Web K8S T3 LAB"
+HAR_FLOW=WORKFLOW
+HAR_WORKFLOW=hostname-canary
+IMAGE=winstonunixt3/hostname
+IMAGE_VER=0.7
