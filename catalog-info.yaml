@@ -7,5 +7,5 @@ metadata:
     harness.io/project-url: https://app.harness.io/ng/account/sGw8xOisQ9yMqTBNFkgaxA/ci/orgs/default/projects/myproject
 spec:
   type: service
-  lifecycle: unknown
+  lifecycle: experimental
   owner: Winston Yang
