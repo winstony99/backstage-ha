@@ -4,7 +4,7 @@ metadata:
   name: nodejswww
   namespace: default
   labels:
-    backstage.io/kubernetes-id: nodejswww
+    backstage.io/kubernetes-id: backstage-ha
 spec:
   replicas: 3
   selector:
@@ -16,7 +16,7 @@ spec:
       labels:
         app: nodejswww
         version: v1
-        backstage.io/kubernetes-id: nodejswww
+        backstage.io/kubernetes-id: backstage-ha
     spec:
       containers:
         - image: wmy9/nodejswww:harness
@@ -30,7 +30,7 @@ kind: Service
 metadata:
   name: nodejswww
   labels:
-    backstage.io/kubernetes-id: nodejswww  
+    backstage.io/kubernetes-id: backstage-ha 
 spec:
   ports:
     - port: 80
