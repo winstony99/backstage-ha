@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backstage-ha
+  annotations:
+    github.com/project-slug: winstony99/backstage-ha
+spec:
+  type: other
+  lifecycle: unknown
+  owner: Winston Yang
